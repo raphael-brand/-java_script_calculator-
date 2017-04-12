@@ -4,13 +4,13 @@ var result = 0;
 var maxLength = 30;
 
 
-function AddDigit(x) {
+function AddDigit(x) { //This Function  gets the  Number from the button
    if (result == 0){
     console.log(x);
     firstNumber = x;
-    result = firstNumber.toString();
+    result = firstNumber.toString(); // converting the number to a string
     document.getElementById('resultField').innerHTML = result ;
-    console.log("first number added");
+    // Adds the Number to the Result-field
     }
     else {
        firstNumber = x ;
@@ -23,7 +23,7 @@ function AddDigit(x) {
 
 
 
- function AddOperator(y) {
+ function AddOperator(y) { // adds an operator to the Result-field
         if (result != 0 && result.substr(result.length-1) != y ) {
           console.log("adding");
           result = result + y ;
@@ -32,11 +32,11 @@ function AddDigit(x) {
         return result;
 };
 
-  function cal() {
+  function cal() { // converts the text in Result-field to math and calculate
     document.getElementById('resultField').innerHTML = eval(result) ;
     console.log(result);
     result = eval(result);
-    result = result.toString();
+    result = result.toString(); //
     console.log("The Answer is   " + result);
     return result;
   }
