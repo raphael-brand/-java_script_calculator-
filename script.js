@@ -3,6 +3,8 @@ var secondNumber = "0";
 var result = 0;
 var maxLength = 30;
 
+var isOperating = false;
+
 function AddDigit(x) { //This Function  gets the  Number from the button
    if (result == 0){
     console.log(x);
@@ -17,17 +19,29 @@ function AddDigit(x) { //This Function  gets the  Number from the button
       console.log(result);
       document.getElementById('resultField').innerHTML = result ;
     }
+    isOperating = false;
     return result;
 };
 
 
+ function RemoveOperator() {
+   if(!isOperating) return;
+   result = result.substr(0, result.length-1)
+   document.getElementById('resultField').innerText = result;
+   isOperating = false;
+ }
 
  function AddOperator(y) { // adds an operator to the Result-field
-    if (result != 0 && result.substr(result.length-1) != y ) {
+    if(isOperating) 
+      RemoveOperator();
+
+    if (result != 0) {
       console.log("adding");
       result = result + y ;
       document.getElementById('resultField').innerHTML = result ;
+      isOperating = true;
     }
+    
     return result;
 };
 
