@@ -3,7 +3,6 @@ var secundNumber = "0";
 var result = 0;
 var maxLength = 30;
 
-
 function AddDigit(x) { //This Function  gets the  Number from the button
    if (result == 0){
     console.log(x);
@@ -24,12 +23,12 @@ function AddDigit(x) { //This Function  gets the  Number from the button
 
 
  function AddOperator(y) { // adds an operator to the Result-field
-        if (result != 0 && result.substr(result.length-1) != y ) {
-          console.log("adding");
-          result = result + y ;
-          document.getElementById('resultField').innerHTML = result ;
-        }
-        return result;
+    if (result != 0 && result.substr(result.length-1) != y ) {
+      console.log("adding");
+      result = result + y ;
+      document.getElementById('resultField').innerHTML = result ;
+    }
+    return result;
 };
 
   function cal() { // converts the text in Result-field to math and calculate
@@ -55,3 +54,9 @@ function clearAll() {
   result = 0 ;
   console.log("cleared");
 };
+
+/*function AddSave() {
+SaveElement = document.createElement("BUTTON");
+SaveElement.className = "save";
+document.getElementById('pa').appendChild(SaveElement);
+}*/
