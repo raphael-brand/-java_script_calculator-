@@ -1,5 +1,5 @@
 var firstNumber = "0";
-var secundNumber = "0";
+var secondNumber = "0";
 var result = 0;
 var maxLength = 30;
 
@@ -50,7 +50,7 @@ function deleteDigit() {
 function clearAll() {
   document.getElementById('resultField').innerHTML = 0 ;
   firstNumber = 0 ;
-  secundNumber = 0 ;
+  secondNumber = 0 ;
   result = 0 ;
   console.log("cleared");
 };
