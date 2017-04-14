@@ -1,6 +1,8 @@
   <!DOCTYPE html>
   <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animate.css">
     <meta charset="utf-8">
@@ -8,39 +10,58 @@
     <title>Cal</title>
   </head>
   <body>
-    <h1>My Simple Calculator</h1>
-    <div class="main">
+
+    <div class="container-fluid">
+      <div class="col-sm-6">
+        <h1>My Simple Calculator</h1>
+    <div class="main container">
       <div class="row resultBar animated bounceInUp" id="resultField">0</div>
       <div class="row animated bounceInUp">
-        <button type="button" name="button" class="opra" onclick="clearAll()">AC</button>
-        <button type="button" name="button" class="opra delete" onclick="deleteDigit()">C</button>
-        <button type="button" name="button" class="opra" onclick="AddOperator('%')">%</button>
-        <button type="button" name="button" class="opra" onclick="AddOperator('/')">/</button>
+        <button class="opra" onclick="clearAll()">AC</button>
+        <button class="opra delete" onclick="deleteDigit()">C</button>
+        <button class="opra" onclick="AddOperator('%')">%</button>
+        <button class="opra" onclick="AddOperator('/')">/</button>
       </div>
       <div class="row animated bounceInUp">
-        <button type="button" name="button" class="number" onclick="AddDigit(7)" id="7">7</button>
-        <button type="button" name="button" class="number" onclick="AddDigit(8)" id="8">8</button>
-        <button type="button" name="button" class="number" onclick="AddDigit(9)" id="9">9</button>
-        <button type="button" name="button" class="opra" onclick="AddOperator('*')">*</button>
+        <button class="number" onclick="AddDigit(7)" id="7">7</button>
+        <button class="number" onclick="AddDigit(8)" id="8">8</button>
+        <button class="number" onclick="AddDigit(9)" id="9">9</button>
+        <button class="opra" onclick="AddOperator('*')">*</button>
       </div>
       <div class="row animated bounceInUp">
-        <button type="button" name="button" class="number" onclick="AddDigit(4)" id="4">4</button>
-        <button type="button" name="button" class="number" onclick="AddDigit(5)" id="5">5</button>
-        <button type="button" name="button" class="number" onclick="AddDigit(6)" id="6">6</button>
-        <button type="button" name="button" class="opra" onclick="AddOperator('-')">-</button>
+        <button class="number" onclick="AddDigit(4)" id="4">4</button>
+        <button class="number" onclick="AddDigit(5)" id="5">5</button>
+        <button class="number" onclick="AddDigit(6)" id="6">6</button>
+        <button class="opra" onclick="AddOperator('-')">-</button>
       </div>
       <div class="row animated bounceInUp">
-        <button type="button" name="button" class="number" onclick="AddDigit(1)" id="1">1</button>
-        <button type="button" name="button" class="number" onclick="AddDigit(2)" id="2">2</button>
-        <button type="button" name="button" class="number" onclick="AddDigit(3)" id="3">3</button>
-        <button type="button" name="button" class="opra" onclick="AddOperator('+')">+</button>
+        <button class="number" onclick="AddDigit(1)" id="1">1</button>
+        <button class="number" onclick="AddDigit(2)" id="2">2</button>
+        <button class="number" onclick="AddDigit(3)" id="3">3</button>
+        <button class="opra" onclick="AddOperator('+')">+</button>
       </div>
       <div class="row animated bounceInUp">
-        <button type="button" name="button" class="number zero" onclick="AddDigit(0)">0</button>
-        <button type="button" name="button" class="number" onclick="AddDigit('.')">.</button>
-        <button type="button" name="button" class="opra" onclick="cal()">=</button>
+        <button class="number zero" onclick="AddDigit(0)">0</button>
+        <button class="number" onclick="AddDigit('.')">.</button>
+        <button class="opra" onclick="cal()">=</button>
       </div>
     </div>
-  </div>
+    </div>
+    <div class="col-sm-6">
+      <button onclick="AddSave()" class="Add">+</button>
+  <!--  <div class="saveField">
+        <form action="saveField">
+          <input type="text" class="heading">
+        </form>
+        <div class="saveRow">
+          <span class="glyphicon glyphicon-pencil rowIcon"></span>
+          <span class="glyphicon glyphicon-trash rowIcon"></span>
+          <span class="glyphicon glyphicon-floppy-disk rowIcon"></span>
+        </div>
+
+      </div>-->
+
+    </div>
+    </div>
   </body>
   </html>
