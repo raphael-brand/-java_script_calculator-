@@ -68,9 +68,38 @@ function clearAll() {
   result = 0 ;
   console.log("cleared");
 };
+var classCount = 0;
+var cont  = '<form action="saveField">'+'<input type="text" class="heading"></form>'+'<div class="saveRow">'+'<span class="glyphicon glyphicon-pencil rowIcon"></span>'+
+  '<span class="glyphicon glyphicon-trash rowIcon"></span>'+
+  '<span class="glyphicon glyphicon-floppy-disk rowIcon"></span>'+
+'</div>' ;
+function AddSave() {
+    console.log("adding");
+    var textField = document.createElement('input');
+    textField.type = "text";
+    textField.className = "heading";
+    var SaveElement = document.createElement("DIV");
+    SaveElement.className = "saveField animated bounceInUp";
+    var resultDispaly = document.createElement('h2');
 
-/*function AddSave() {
-SaveElement = document.createElement("BUTTON");
-SaveElement.className = "save";
-document.getElementById('pa').appendChild(SaveElement);
-}*/
+    document.getElementsByClassName('col-sm-6')[1].appendChild(SaveElement);
+    document.getElementsByClassName("saveField")[classCount].appendChild(resultDispaly);
+    document.getElementsByClassName("saveField")[classCount].innerHTML = cont;
+    classCount = classCount + 1;
+    return classCount;
+    console.log(classCount);
+
+
+
+}
+
+
+
+console.log(cont);
+function Addsavee() {
+  var SaveElement = document.createElement("DIV");
+  SaveElement.className = "saveField";
+  document.getElementsByClassName('col-sm-6')[1].appendChild(SaveElement);
+  document.getElementsByClassName("saveField")[classCount].innerHTML = cont;
+  return true;
+}
