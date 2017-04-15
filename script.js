@@ -31,6 +31,12 @@ function AddDigit(x) { //This Function  gets the  Number from the button
    isOperating = false;
  }
 
+ function AddDecimal() {
+    if(!result.match(/([^\d]?\d*?\.[\d]*|[^\d])$/g)) {
+      AddOperator('.')
+    }
+ }
+
  function AddOperator(y) { // adds an operator to the Result-field
     if(isOperating) 
       RemoveOperator();
@@ -46,6 +52,7 @@ function AddDigit(x) { //This Function  gets the  Number from the button
 };
 
   function cal() { // converts the text in Result-field to math and calculate
+    if(isOperating) return;
     document.getElementById('resultField').innerHTML = eval(result) ;
     console.log(result);
     result = eval(result);
@@ -55,7 +62,7 @@ function AddDigit(x) { //This Function  gets the  Number from the button
   }
 function deleteDigit() {
   if ( result != 0) {
-    result = result.slice(0 , result.length -1 );
+    result = result.substr(0, result.length-1)
     document.getElementById('resultField').innerHTML = result ;
 
   }
@@ -88,9 +95,6 @@ function AddSave() {
     classCount = classCount + 1;
     return classCount;
     console.log(classCount);
-
-
-
 
 }
 
