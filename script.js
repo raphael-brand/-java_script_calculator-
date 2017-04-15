@@ -82,13 +82,13 @@ function AddSave() {
     SaveElement.className = "saveField animated bounceInUp";
     var resultDispaly = document.createElement('h2');
 
+
     document.getElementsByClassName('col-sm-6')[1].appendChild(SaveElement);
     document.getElementsByClassName("saveField")[classCount].appendChild(resultDispaly);
     document.getElementsByClassName("saveField")[classCount].innerHTML = cont;
     classCount = classCount + 1;
     return classCount;
     console.log(classCount);
-
 
 
 }
