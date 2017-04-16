@@ -61,11 +61,10 @@ function AddDigit(x) { //This Function  gets the  Number from the button
     return result;
   }
 function deleteDigit() {
-  if ( result != 0) {
-    result = result.substr(0, result.length-1)
-    document.getElementById('resultField').innerHTML = result ;
-
-  }
+  if ( result != 0)
+    result = result.slice(0 , result.length -1 );
+  if ( result.length == 0 ) result = 0;
+  document.getElementById('resultField').innerHTML = result ;
 }
 
 function clearAll() {
