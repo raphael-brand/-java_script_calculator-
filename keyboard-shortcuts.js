@@ -25,12 +25,22 @@ function pressKey(event) {
 
   var clickTarget = null;
   switch (event.key) {
-    case "0": clickTarget = buttons.get("@class='number zero'")[0]; break;
-    case "*": clickTarget = buttons.get('text()="*"')[0]; break;
-    case "+": clickTarget = buttons.get('text()="+"')[0]; break;
-    case "-": clickTarget = buttons.get('text()="-"')[0]; break;
-    case "/": clickTarget = buttons.get('text()="/"')[0]; break;
-    case ".": clickTarget = buttons.get('text()="."')[0]; break;
+    case "0": clickTarget = buttons.get("@class='number zero'")[0];
+    break;
+    case "*":; case "/":;
+    case "%":; case "+":;
+    case "-":; case ".":
+      clickTarget = buttons.get('text()="'+event.key+'"')[0];
+    break;
+    case "Backspace":
+      clickTarget = buttons.get('text()="C"')[0];
+    break;
+    case "c":; case "Escape":
+      clickTarget = buttons.get('text()="AC"')[0];
+    break;
+    case "Enter":
+      clickTarget = buttons.get('text()="="')[0];
+    break;
   }
   clickTarget && clickTarget.click();
 }
