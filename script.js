@@ -6,7 +6,7 @@ var maxLength = 30;
 var isOperating = false;
 
 function AddDigit(x) { //This Function  gets the  Number from the button
-   if (result == 0){
+   if (result === 0){
     console.log(x);
     firstNumber = x;
     result = firstNumber.toString(); // converting the number to a string
@@ -32,7 +32,7 @@ function AddDigit(x) { //This Function  gets the  Number from the button
  }
 
  function AddDecimal() {
-    if(!result.match(/([^\d]?\d*?\.[\d]*|[^\d])$/g)) {
+    if(!result.toString().match(/([^\d]?\d*?\.[\d]*|[^\d])$/g)) {
       AddOperator('.')
     }
  }
@@ -41,12 +41,12 @@ function AddDigit(x) { //This Function  gets the  Number from the button
     if(isOperating) 
       RemoveOperator();
 
-    if (result != 0) {
+    //if (result != 0) {
       console.log("adding");
       result = result + y ;
       document.getElementById('resultField').innerHTML = result ;
       isOperating = true;
-    }
+    //}
     
     return result;
 };
