@@ -8,20 +8,17 @@ var isOperating = function() {
 };
 
 function AddDigit(x) { //This Function  gets the  Number from the button
-   if (result === 0){
     console.log(x);
-    firstNumber = x;
-    result = firstNumber.toString(); // converting the number to a string
-    document.getElementById('resultField').innerHTML = result ;
-    // Adds the Number to the Result-field
+    firstNumber = x.toString();
+    if (result === 0){
+        result = firstNumber; // converting the number to a string
     }
     else {
-       firstNumber = x ;
-      result = result + firstNumber.toString() ;
-      console.log(result);
-      document.getElementById('resultField').innerHTML = result ;
+        result += firstNumber;
     }
-    return result;
+    // Adds the Number to the Result-field
+    document.getElementById('resultField').innerHTML = result ;
+    //return result;
 };
 
 
